@@ -46,12 +46,11 @@ class _CubitsCounterScreenState extends State<CubitsCounterScreen> {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           FloatingActionButton(
-            onPressed: () {
+            onPressed: () {      
               counterCubit.increament();
             },
             child: const Icon(Icons.add),
           ),
-          const SizedBox(width: 50,),
           FloatingActionButton(
             onPressed: () {
               counterCubit.decremenet();
@@ -66,16 +65,12 @@ class _CubitsCounterScreenState extends State<CubitsCounterScreen> {
 
 class CounterCubit extends Cubit<int> {
   CounterCubit() : super(0);
-
   int _count = 0;
-
   void increament() {
-    _count++;
-    emit(_count);
+    emit( _count++);
   }
-
   void decremenet() {
     _count--;
-    emit(_count);
+    emit( _count--);
   }
 }

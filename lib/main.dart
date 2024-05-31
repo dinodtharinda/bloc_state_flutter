@@ -61,9 +61,12 @@ class Person {
   Person.fromJson(Map<String, dynamic> json)
       : name = json["name"] as String,
         age = json["age"] as int;
+
+  @override
+  String toString() => "name = $name, age = $age";
 }
 
-Future<Iterable<Person>> getPerson(String url) async=>await HttpClient()
+Future<Iterable<Person>> getPerson(String url) async => await HttpClient()
     .getUrl(Uri.parse(url))
     .then((req) => req.close())
     .then((resp) => resp.transform(utf8.decoder).join())

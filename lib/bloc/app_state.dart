@@ -4,20 +4,20 @@ import 'package:flutter/material.dart';
 @immutable
 class AppState {
   final bool isLoading;
-  final LoginErrors? loginErrors;
+  final LoginErrors? loginError;
   final LoginHandle? loginHandle;
   final Iterable<Note>? fetchedNotes;
 
   const AppState({
     required this.isLoading,
-    required this.loginErrors,
+    required this.loginError,
     required this.loginHandle,
     required this.fetchedNotes,
   });
 
   const AppState.empty()
       : isLoading = false,
-        loginErrors = null,
+        loginError = null,
         loginHandle = null,
         fetchedNotes = null;
 
@@ -25,9 +25,9 @@ class AppState {
   String toString() {
     return {
       'isLoading': isLoading,
-      'loginErrors': loginErrors,
+      'loginErrors': loginError,
       'loginHandle': loginHandle,
-      'fetchedNotes': fetchedNotes
+      'fetchedNotes': fetchedNotes,
     }.toString();
   }
 }

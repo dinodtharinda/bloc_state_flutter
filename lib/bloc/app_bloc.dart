@@ -18,7 +18,7 @@ class AppBloc extends Bloc<AppAction, AppState> {
         emit(
           const AppState(
             isLoading: true,
-            loginErrors: null,
+            loginError: null,
             loginHandle: null,
             fetchedNotes: null,
           ),
@@ -29,7 +29,7 @@ class AppBloc extends Bloc<AppAction, AppState> {
         emit(
           AppState(
             isLoading: false,
-            loginErrors: loginHandle == null ? LoginErrors.invatidHandle : null,
+            loginError: loginHandle == null ? LoginErrors.invalidHandle : null,
             loginHandle: loginHandle,
             fetchedNotes: null,
           ),
@@ -43,7 +43,7 @@ class AppBloc extends Bloc<AppAction, AppState> {
         emit(
           AppState(
             isLoading: true,
-            loginErrors: null,
+            loginError: null,
             loginHandle: state.loginHandle,
             fetchedNotes: null,
           ),
@@ -55,7 +55,7 @@ class AppBloc extends Bloc<AppAction, AppState> {
           emit(
             AppState(
               isLoading: false,
-              loginErrors: LoginErrors.invatidHandle,
+              loginError: LoginErrors.invalidHandle,
               loginHandle: loginHandle,
               fetchedNotes: null,
             ),
@@ -71,7 +71,7 @@ class AppBloc extends Bloc<AppAction, AppState> {
         emit(
           AppState(
             isLoading: false,
-            loginErrors: null,
+            loginError: null,
             loginHandle: loginHandle,
             fetchedNotes: notes,
           ),

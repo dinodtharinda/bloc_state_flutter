@@ -22,7 +22,7 @@ class LoginHandle {
   }
 }
 
-enum LoginErrors { invatidHandle }
+enum LoginErrors { invalidHandle }
 
 @immutable
 class Note {

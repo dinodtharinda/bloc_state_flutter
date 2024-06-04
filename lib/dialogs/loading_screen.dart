@@ -1,7 +1,5 @@
 // ignore_for_file: unnecessary_late, unused_field, no_leading_underscores_for_local_identifiers
-
 import 'dart:async';
-import 'dart:ffi';
 
 import 'package:bloc_state_flutter/dialogs/loading_screen_controller.dart';
 import 'package:flutter/material.dart';
@@ -86,7 +84,7 @@ class LoadingScreen {
                           }
                         },
                         stream: _text.stream,
-                      )
+                      ),
                     ],
                   ),
                 ),
@@ -96,7 +94,7 @@ class LoadingScreen {
         );
       },
     );
-    state?.insert(overlay);
+    state.insert(overlay);
 
     return LoadingScreenController(
       close: () {

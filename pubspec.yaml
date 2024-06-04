@@ -38,7 +38,11 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter_bloc: ^8.1.5
   bloc: ^8.1.4
+<<<<<<< HEAD
   http: ^0.13.5
+=======
+  flutter_hooks: ^0.20.5
+>>>>>>> bloc-app
 
 dev_dependencies:
   flutter_test:

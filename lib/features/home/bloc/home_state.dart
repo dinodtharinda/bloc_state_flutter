@@ -16,7 +16,6 @@ class HomeLoadedSuccessState extends HomeState {
 
   @override
   String toString() {
-  
     return 'Product = $products';
   }
 }
@@ -30,3 +29,16 @@ abstract class HomeActionState extends HomeState {}
 class HomeNavigateToWishlistPageActionState extends HomeActionState {}
 
 class HomeNavigateToCartPageActionState extends HomeActionState {}
+
+class HomeProductItemWishlistedActionState extends HomeActionState {
+  final ProductDataModel product;
+
+  HomeProductItemWishlistedActionState(this.product);
+}
+class HomeProductItemCartedActionState extends HomeActionState {
+  final ProductDataModel product;
+
+  HomeProductItemCartedActionState(this.product);
+  
+}
+

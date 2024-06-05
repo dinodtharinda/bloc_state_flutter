@@ -27,4 +27,13 @@ class ProductDataModel {
   String toString() {
     return 'id = $id, name = $name, description =  $description, price = $price, imageUrl = $imageUrl';
   }
+
+  @override 
+  bool operator ==(covariant ProductDataModel other){
+    return id == other.id && name == other.name;
+  }
+  
+  @override
+  int get hashCode => id.hashCode;
+  
 }

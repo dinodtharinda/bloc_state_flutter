@@ -45,6 +45,20 @@ class _HomeState extends State<Home> {
               builder: (context) => const Wishlist(),
             ),
           );
+        } else if (state is HomeProductItemWishlistedActionState) {
+          final product = state.product;
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('${product.name} Added to Wishlist'),
+            ),
+          );
+        } else if (state is HomeProductItemCartedActionState) {
+          final product = state.product;
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('${product.name} Added to Cart'),
+            ),
+          );
         }
       },
       builder: (context, state) {
@@ -74,7 +88,9 @@ class _HomeState extends State<Home> {
               body: ListView.builder(
                 itemBuilder: (context, index) {
                   return ProductTileWidget(
-                      product: successState.products[index]);
+                    product: successState.products[index],
+                    homeBloc: homeBloc,
+                  );
                 },
                 itemCount: successState.products.length,
               ),

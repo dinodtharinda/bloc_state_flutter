@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "316069713847",
+    "project_id": "bloc-photo-library-dinod",
+    "storage_bucket": "bloc-photo-library-dinod.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316069713847:android:adcd2e7ff3ff2cf3e53a32",
+        "android_client_info": {
+          "package_name": "com.example.bloc_state_flutter"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBQGzEAOOnlrJaNb6_EUFTPUU-QXgKhdhE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

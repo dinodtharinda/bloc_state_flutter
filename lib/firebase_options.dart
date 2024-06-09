@@ -60,7 +60,7 @@ class DefaultFirebaseOptions {
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyA17o6Um3SXQWgoBoicm0MHFRMBbXTMLkM',
     appId: '1:316069713847:ios:9f6122b1ef3ae75fe53a32',
-    messagingSenderId: '316069713847',
+    messagingSenderId: '316069713847', 
     projectId: 'bloc-photo-library-dinod',
     storageBucket: 'bloc-photo-library-dinod.appspot.com',
     iosBundleId: 'com.example.blocStateFlutter',

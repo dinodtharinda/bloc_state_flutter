@@ -9,7 +9,7 @@ abstract class AppState {
   final AuthError? authError;
   const AppState({
     required this.isLoading,
-    required this.authError,
+     this.authError,
   });
 }
 
@@ -21,7 +21,7 @@ class AppStateLoggedIn extends AppState {
     required super.isLoading,
     required this.user,
     required this.images,
-    required super.authError,
+     super.authError,
   });
   @override
   bool operator ==(other) {
@@ -48,10 +48,10 @@ class AppStateLoggedIn extends AppState {
 }
 
 @immutable
-class AppStateLogOut extends AppState {
-  const AppStateLogOut({
+class AppStateLoggedOut extends AppState {
+  const AppStateLoggedOut({
     required super.isLoading,
-    required super.authError,
+   super.authError,
   });
 
   @override
@@ -64,7 +64,7 @@ class AppStateLogOut extends AppState {
 class AppStateIsInRegistrationView extends AppState {
   const AppStateIsInRegistrationView({
     required super.isLoading,
-    required super.authError,
+    super.authError,
   });
 }
 

@@ -1,5 +1,8 @@
+import 'package:bloc_state_flutter/bloc/app_bloc.dart';
+import 'package:bloc_state_flutter/views/app.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'firebase_options.dart';
 
 void main() async {
@@ -10,8 +13,12 @@ void main() async {
   runApp(
     MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const HomePage(),
+      home: BlocProvider<AppBloc>(
+        create: (_) => AppBloc(),
+        child:const App(),
+      ),
       theme: ThemeData(
+       
         appBarTheme: const AppBarTheme(
           centerTitle: true,
           color: Colors.blue,
@@ -25,15 +32,3 @@ void main() async {
   );
 }
 
-class HomePage extends StatelessWidget {
-  const HomePage({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('FireBase Bloc'),
-      ),
-    );
-  }
-}
